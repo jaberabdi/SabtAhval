@@ -14,7 +14,20 @@ namespace SabtAhval
             {
                 Console.WriteLine("Enter your command:");
                 Console.Write(" cmd>> ");
-
+                string[] command = Console.ReadLine().Split(' ');
+                switch(command[0].ToLower())
+                {
+                    case "add":
+                        break;
+                    case "delete":
+                        break;
+                    case "list":
+                        break;
+                    case "update":
+                        break;
+                    case "exit":
+                        return;
+                }
             }
         }
     }
