@@ -10,8 +10,12 @@ namespace SabtAhval
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Amir");
-            Console.WriteLine("jaber");
+            while (true)
+            {
+                Console.WriteLine("Enter your command:");
+                Console.Write(" cmd>> ");
+
+            }
         }
     }
 }
