@@ -15,14 +15,21 @@ namespace SabtAhval
                 Console.WriteLine("Enter your command:");
                 Console.Write(" cmd>> ");
                 string[] command = Console.ReadLine().Split(' ');
-                switch(command[0].ToLower())
+                Person _person;
+                switch (command[0].ToLower())
                 {
                     case "add":
                         // check input
-                        Person _person = new Person();
+                        if (command.Length < 5)
+                        {
+                            DataController.AddErrorMessage();
+                        }
+                        _person = new Person(command[1],command[2],command[3],DateTime.Parse(command[4]));
                         DataController.Add(_person);
                         break;
                     case "delete":
+                        // check input
+                        _person = new Person(command[1], command[2], command[3], DateTime.Parse(command[4]));
                         break;
                     case "list":
                         break;

@@ -27,5 +27,10 @@ namespace SabtAhval
         {
             Console.WriteLine("we have to write the code for update");
         }
+
+        internal static void AddErrorMessage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
