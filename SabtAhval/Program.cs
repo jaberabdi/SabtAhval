@@ -18,6 +18,9 @@ namespace SabtAhval
                 switch(command[0].ToLower())
                 {
                     case "add":
+                        // check input
+                        Person _person = new Person();
+                        DataController.Add(_person);
                         break;
                     case "delete":
                         break;
