@@ -11,6 +11,7 @@ namespace SabtAhval
         static void Main(string[] args)
         {
             Console.WriteLine("Amir");
+            Console.WriteLine("jaber");
         }
     }
 }
