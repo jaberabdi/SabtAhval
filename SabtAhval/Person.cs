@@ -16,6 +16,11 @@ namespace SabtAhval
             BirthDate = _BirthDate;
         }
 
+        public Person(string _NationalNumber)
+        {
+            NationalNumber = _NationalNumber;
+        }
+
         public string NationalNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
