@@ -9,13 +9,13 @@ namespace SabtAhval
 {
     static class DataController
     {
-        private const string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=model;Integrated Security=True";
+        private const string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True";
         public static void Insert(Person _person)
         {
             string sql = null;
             using (SqlConnection cnn = new SqlConnection(connetionString))
             {
-                List(_person.NationalNumber)
+
                 sql = "INSERT INTO [Persons] ([NationalNumber],[FirstName],[LastName],[BirthDate],[DeathDate],[Father],[Mother],[Spouse]) " +
                     "values(@natNum,@first,@last,@birthDate,@deathDate,@father,@mother,@spouse)";
                 cnn.Open();
@@ -69,12 +69,13 @@ namespace SabtAhval
             }
         }
 
-        public static void List(Person _person)
+        public static Person[] List(Person _person)
         {
+            List<Person> result = new List<Person>();
             string sql = null;
             using (SqlConnection cnn = new SqlConnection(connetionString))
             {
-                sql = "SELECT [FirstName],[LastName] FROM [Persons] WHERE [NationalNumber] = @natNum";
+                sql = "SELECT [NationalNumber],[FirstName],[LastName],[BirthDate] FROM [Persons] WHERE [NationalNumber] = @natNum";
                 cnn.Open();
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
@@ -85,17 +86,17 @@ namespace SabtAhval
                     {
                         while (reader.Read())
                         {
-                            Console.WriteLine("\t{0}\t{1}", reader.GetString(0),
-                                reader.GetString(1));
+                            Person temp = new Person(reader.GetString(0));
+                            temp.FirstName = reader.GetString(1);
+                            temp.LastName = reader.GetString(2);
+                            temp.BirthDate = reader.GetDateTime(3);
+                            result.Add(temp);
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine("\tNo rows found.");
                     }
                 }
                 cnn.Close();
             }
+            return result.ToArray();
         }
 
         public static void Update(Person _person)

@@ -30,5 +30,10 @@ namespace SabtAhval
         public Person Mother { get; set; }
         public Person Spouse { get; set; }
         public List<Person> children { get; set; }
+
+        public override string ToString(){
+            return NationalNumber +"\t" +FirstName+" " +LastName+"\n"
+                + "\t"+BirthDate??""+" "+DeathDate??""+(Father?.NationalNumber)??""+(Mother?.NationalNumber)??""+(Spouse?.NationalNumber)??"";
+        }  
     }
 }

@@ -45,7 +45,15 @@ namespace SabtAhval
                             break;
                         }
                         _person = new Person(command[1]);
-                        DataController.List(_person);
+                        Person[] temp = DataController.List(_person);
+                        if (temp.Length == 0){
+                            Console.WriteLine("No Person found");
+	                    }
+                        else{
+                            foreach (var item in temp){
+                                Console.WriteLine(item);
+	                        }
+                        }
                         break;
                     case "update":
                         if (command.Length < 3)
