@@ -100,7 +100,7 @@ namespace SabtAhval
         }
 
         public static void Update(Person _person)
-        {
+        
             Console.WriteLine("we have to write the code for update");
         }
 
