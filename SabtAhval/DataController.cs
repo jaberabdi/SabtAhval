@@ -9,7 +9,7 @@ namespace SabtAhval
 {
     static class DataController
     {
-        private const string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True";
+        private const string connetionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyDatabase;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True";
         public static void Insert(Person _person)
         {
             string sql = null;
