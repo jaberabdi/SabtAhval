@@ -21,8 +21,10 @@ namespace SabtAhval
                     case "insert":
                         if (command.Length < 5)
                         {
-                            DataController.AddErrorMessage();
+                            DataController.InsertErrorMessage();
                             break;
+                           
+            
                         }
 
                         _person = new Person(command[1], command[2], command[3], DateTime.Parse(command[4]));

@@ -52,6 +52,26 @@ namespace SabtAhval
             }
         }
 
+        internal static void UpdateErrorMessage()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void ListErrorMessage()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void DeleteErrorMessage()
+        {
+            Console.WriteLine("enter two parameters");
+        }
+
+        internal static void InsertErrorMessage()
+        {
+            Console.WriteLine("enter five parameters");
+        }
+
         public static void Delete(Person _person)
         {
             string sql = null;
@@ -100,30 +120,31 @@ namespace SabtAhval
         }
 
         public static void Update(Person _person)
-        
+
+
             Console.WriteLine("we have to write the code for update");
         }
 
-        internal static void AddErrorMessage()
-        {
-            Console.WriteLine("error using add");
-
-        }
-        internal static void DeleteErrorMessage()
-        {
-            Console.WriteLine("error using delete");
-
-        }
-        internal static void ListErrorMessage()
-        {
-            Console.WriteLine("error using list");
-
-        }
-        internal static void UpdateErrorMessage()
-        {
-            Console.WriteLine("error using update");
-
-        }
+    internal static void AddErrorMessage()
+    {
+        Console.WriteLine("error using add");
 
     }
+    internal static void DeleteErrorMessage()
+    {
+        Console.WriteLine("error using delete");
+
+    }
+    internal static void ListErrorMessage()
+    {
+        Console.WriteLine("error using list");
+
+    }
+    internal static void UpdateErrorMessage()
+    {
+        Console.WriteLine("error using update");
+
+    }
+
+}
 }
