@@ -54,22 +54,22 @@ namespace SabtAhval
 
         internal static void UpdateErrorMessage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("enter two parameters");
         }
 
         internal static void ListErrorMessage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("enter one parameter ");
         }
 
         internal static void DeleteErrorMessage()
         {
-            Console.WriteLine("enter two parameters");
+            Console.WriteLine("enter one parameter");
         }
 
         internal static void InsertErrorMessage()
         {
-            Console.WriteLine("enter five parameters");
+            Console.WriteLine("enter four parameters");
         }
 
         public static void Delete(Person _person)
