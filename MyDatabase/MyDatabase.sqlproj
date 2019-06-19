@@ -23,7 +23,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <GenerateCreateScript>False</GenerateCreateScript>
+    <GenerateCreateScript>True</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -61,5 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Persons.sql" />
+    <Build Include="Childern.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="MyDatabase.refactorlog" />
   </ItemGroup>
 </Project>
