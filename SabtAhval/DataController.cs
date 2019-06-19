@@ -57,6 +57,11 @@ namespace SabtAhval
             Console.WriteLine("enter two parameters");
         }
 
+        internal static void Update(Person person)
+        {
+            Console.WriteLine(" I want will write");
+        }
+
         internal static void ListErrorMessage()
         {
             Console.WriteLine("enter one parameter ");
@@ -119,32 +124,9 @@ namespace SabtAhval
             return result.ToArray();
         }
 
-        public static void Update(Person _person)
+        
 
 
-            Console.WriteLine("we have to write the code for update");
-        }
-
-    internal static void AddErrorMessage()
-    {
-        Console.WriteLine("error using add");
-
-    }
-    internal static void DeleteErrorMessage()
-    {
-        Console.WriteLine("error using delete");
-
-    }
-    internal static void ListErrorMessage()
-    {
-        Console.WriteLine("error using list");
-
-    }
-    internal static void UpdateErrorMessage()
-    {
-        Console.WriteLine("error using update");
-
-    }
 
 }
 }
